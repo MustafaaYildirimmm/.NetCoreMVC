@@ -10,7 +10,7 @@ namespace NetCoreMVC.DataAccess.Concrete.EntityFramework.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Northwind;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"data source=.;initial catalog=northwind;persist security info=True;user id=sa;password=123");
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
